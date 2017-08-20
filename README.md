@@ -6,6 +6,8 @@ _I have a media addiction and fast internet._
 
 ![It's a bunch of videos](https://github.com/danlaush/video-wall/raw/master/docs/screenshot.jpg)
 
+To be honest I don't think this will go too much further. Too many problems loading iframes and sourcing reliable news live streams online. Aljazeera & the Australian ABC are the only ones available free online that I've found.
+
 *I don't actually have a TV at the moment
 
 # Usage
@@ -26,6 +28,8 @@ _I have a media addiction and fast internet._
 - Generate streams from a list of URLs
 - Automate tiling based on number of streams (if <4, tile 2x2 not 3x3)
 - Manage list of streams in an interface
+- Suggest streams
+    - Not all streams are live 24 hours
 
 ## Struggles
 
