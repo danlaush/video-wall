@@ -9,9 +9,10 @@
       </li>
   </ul>
   <form v-on:submit="addVideoStream">
-    <input id="newStream" />
-    <button id="add" type="submit">Add Stream</button>
+    <input />
+    <button type="submit">Add Stream</button>
   </form>
+  <p>Press <em>Alt + S</em> to toggle the Settings sidebar open and closed</p>
 </div>
 </template>
 
@@ -19,11 +20,6 @@
   export default {
     name: 'settings',
     props: ['streams'],
-    data() {
-      return {
-        msg: 'Welcome to Your Vue.js App',
-      };
-    },
     methods: {
       addVideoStream(e) {
         e.preventDefault();
@@ -31,7 +27,6 @@
         e.target.reset();
       },
       removeVideoStream(stream) {
-        console.log('hello', stream);
         this.$emit('removeVideoStream', stream);
       },
     },

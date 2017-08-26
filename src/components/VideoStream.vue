@@ -10,11 +10,6 @@
 export default {
   name: 'video-stream',
   props: ['stream'],
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
-  },
 };
 </script>
 
@@ -31,7 +26,6 @@ export default {
 .video__wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	/*padding-top: 25px;*/
 	height: 0;
 }
 .video__wrapper iframe {
