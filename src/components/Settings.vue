@@ -4,8 +4,9 @@
     <ul>
       <li v-for="(stream, index) in streams"
       :key="index">
-      <input type="text" :value="stream" />
-    </li>
+        <input type="text" :value="stream" />
+        <button v-on:click="removeVideoStream(stream)">X</button>
+      </li>
   </ul>
   <form v-on:submit="addVideoStream">
     <input id="newStream" />
@@ -28,6 +29,10 @@
         e.preventDefault();
         this.$emit('addVideoStream', e.target[0].value);
         e.target.reset();
+      },
+      removeVideoStream(stream) {
+        console.log('hello', stream);
+        this.$emit('removeVideoStream', stream);
       },
     },
   };

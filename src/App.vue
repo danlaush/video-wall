@@ -3,7 +3,8 @@
     <settings 
       class="settings" 
       :streams="streams"
-      @addVideoStream="addVideoStream"></settings>
+      @addVideoStream="addVideoStream"
+      @removeVideoStream="removeVideoStream"></settings>
     <div class="videos">
       <video-stream
         v-for="(stream, index) in streams"
@@ -25,7 +26,7 @@ export default {
   },
   data() {
     return {
-      settingsOpen: false,
+      settingsOpen: true,
       streams: [
         'https://www.youtube.com/embed/WAt9ZT2CQWg?autoplay=1',
         'https://www.youtube.com/embed/35opuaCwVRI?autoplay=1',
@@ -47,6 +48,10 @@ export default {
         newUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
       }
       this.streams.push(newUrl);
+    },
+    removeVideoStream(url) {
+      const streamToRemove = this.streams.indexOf(url);
+      this.streams.splice(streamToRemove, 1);
     },
     toggleSettings(e) {
       if (e.altKey && e.keyCode === 83) { // Alt + S
